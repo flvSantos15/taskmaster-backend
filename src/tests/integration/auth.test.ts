@@ -165,7 +165,7 @@ describe('Auth Integration Test', () => {
         .get('/api/auth/profile')
         .expect(401);
 
-      expect(response.body).toHaveProperty('message', 'Token de acesso requerido');
+      expect(response.body).toHaveProperty('message', 'Access Token Required');
     });
 
     it('should not get profile with invalid token', async () => {
@@ -174,7 +174,7 @@ describe('Auth Integration Test', () => {
         .set('Authorization', 'Bearer invalid-token')
         .expect(403);
 
-      expect(response.body).toHaveProperty('message', 'Token inválido');
+      expect(response.body).toHaveProperty('message', 'Invalid Token');
     });
   });
 })
