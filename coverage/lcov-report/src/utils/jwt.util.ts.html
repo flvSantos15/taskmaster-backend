@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -77,34 +77,34 @@
 <a name='L12'></a><a href='#L12'>12</a>
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import jwt from 'jsonwebtoken'</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import jwt from 'jsonwebtoken'
 &nbsp;
-const JWT_SECRET = <span class="cstat-no" title="statement not covered" >process.env.JWT_SECRET!</span>
-const JWT_REFRESH_SECRET = <span class="cstat-no" title="statement not covered" >process.env.JWT_REFRESH_SECRET!</span>
+const JWT_SECRET = process.env.JWT_SECRET!
+const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET!
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >generateTokens = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>u</span>serId: string) =&gt; {</span>
-  const accessToken = <span class="cstat-no" title="statement not covered" >jwt.sign({ userId }, JWT_SECRET, { expiresIn: '15m' })</span>
-  const refreshToken = <span class="cstat-no" title="statement not covered" >jwt.sign({ userId }, JWT_REFRESH_SECRET, { expiresIn: '7d' })</span>
+export const generateTokens = (userId: string) =&gt; {
+  const accessToken = jwt.sign({ userId }, JWT_SECRET, { expiresIn: '15m' })
+  const refreshToken = jwt.sign({ userId }, JWT_REFRESH_SECRET, { expiresIn: '7d' })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return { accessToken, refreshToken }</span>
+  return { accessToken, refreshToken }
 }
 &nbsp;
-export const <span class="cstat-no" title="statement not covered" >verifyToken = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>t</span>oken: string) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return jwt.verify(token, JWT_SECRET) as { userId: string }</span>
+export const verifyToken = (token: string) =&gt; {
+  return jwt.verify(token, JWT_SECRET) as { userId: string }
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -112,7 +112,7 @@ export const <span class="cstat-no" title="statement not covered" >verifyToken =
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-30T20:38:36.739Z
+                at 2025-09-30T20:58:08.273Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

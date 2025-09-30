@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1759264716776" clover="3.2.0">
-  <project timestamp="1759264716776" name="All files">
-    <metrics statements="169" coveredstatements="7" conditionals="41" coveredconditionals="0" methods="18" coveredmethods="2" elements="228" coveredelements="9" complexity="0" loc="169" ncloc="169" packages="7" files="11" classes="11"/>
+<coverage generated="1759265888302" clover="3.2.0">
+  <project timestamp="1759265888302" name="All files">
+    <metrics statements="169" coveredstatements="16" conditionals="41" coveredconditionals="0" methods="18" coveredmethods="4" elements="228" coveredelements="20" complexity="0" loc="169" ncloc="169" packages="7" files="11" classes="11"/>
     <package name="src">
       <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="app.ts" path="/home/flvsantos/dev/www/taskmaster-backend/src/app.ts">
@@ -117,8 +117,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="prisma.ts" path="/home/flvsantos/dev/www/taskmaster-backend/src/libs/prisma.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.middleware">
@@ -203,18 +203,18 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="14" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="jwt.util.ts" path="/home/flvsantos/dev/www/taskmaster-backend/src/utils/jwt.util.ts">
-        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="password.util.ts" path="/home/flvsantos/dev/www/taskmaster-backend/src/utils/password.util.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
