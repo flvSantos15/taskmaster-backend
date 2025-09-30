@@ -3,13 +3,13 @@ import { createTask, deleteTask, getTasks, updateTask } from '../controllers/tas
 import { authenticateToken } from '../middleware/auth.middleware';
 import { taskSchema, validate } from '../middleware/validate.middleware';
 
-const router = Router();
+const taskRouter = Router();
 
-router.use(authenticateToken);
+taskRouter.use(authenticateToken);
 
-router.get('/', getTasks);
-router.post('/', validate(taskSchema), createTask);
-router.put('/:id', updateTask);
-router.delete('/:id', deleteTask);
+taskRouter.get('/', getTasks);
+taskRouter.post('/', validate(taskSchema), createTask);
+taskRouter.put('/:id', updateTask);
+taskRouter.delete('/:id', deleteTask);
 
-export default router;
+export { taskRouter };

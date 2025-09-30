@@ -2,8 +2,8 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import authRoutes from './routes/auth.routes';
-import taskRoutes from './routes/tasks.routes';
+import { authRouter } from './routes/auth.routes';
+import { taskRouter } from './routes/tasks.routes';
 
 const app = express()
 
@@ -14,8 +14,8 @@ app.use(morgan('combined'))
 app.use(express.json())
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/tasks', taskRoutes);
+app.use('/api/auth', authRouter);
+app.use('/api/tasks', taskRouter);
 
 // Health check
 app.get('/health', (req, res) => {

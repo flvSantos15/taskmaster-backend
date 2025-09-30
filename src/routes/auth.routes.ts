@@ -3,10 +3,10 @@ import { getProfile, login, register } from '../controllers/auth.controller';
 import { authenticateToken } from '../middleware/auth.middleware';
 import { loginSchema, registerSchema, validate } from '../middleware/validate.middleware';
 
-const router = Router();
+const authRouter = Router();
 
-router.post('/register', validate(registerSchema), register);
-router.post('/login', validate(loginSchema), login);
-router.get('/profile', authenticateToken, getProfile);
+authRouter.post('/register', validate(registerSchema), register);
+authRouter.post('/login', validate(loginSchema), login);
+authRouter.get('/profile', authenticateToken, getProfile);
 
-export default router;
+export { authRouter };
