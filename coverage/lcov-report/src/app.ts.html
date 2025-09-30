@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">93.75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>15/16</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">93.75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>15/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -89,57 +89,57 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import cors from "cors";</span>
-<span class="cstat-no" title="statement not covered" >import express from "express";</span>
-<span class="cstat-no" title="statement not covered" >import helmet from "helmet";</span>
-<span class="cstat-no" title="statement not covered" >import morgan from "morgan";</span>
-<span class="cstat-no" title="statement not covered" >import { authRouter } from './routes/auth.routes';</span>
-<span class="cstat-no" title="statement not covered" >import { taskRouter } from './routes/tasks.routes';</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import cors from "cors";
+import express from "express";
+import helmet from "helmet";
+import morgan from "morgan";
+import { authRouter } from './routes/auth.routes';
+import { taskRouter } from './routes/tasks.routes';
 &nbsp;
-const app = <span class="cstat-no" title="statement not covered" >express()</span>
+const app = express()
 &nbsp;
 // Middleware
-<span class="cstat-no" title="statement not covered" >app.use(helmet())</span>
-<span class="cstat-no" title="statement not covered" >app.use(cors())</span>
-<span class="cstat-no" title="statement not covered" >app.use(morgan('combined'))</span>
-<span class="cstat-no" title="statement not covered" >app.use(express.json())</span>
+app.use(helmet())
+app.use(cors())
+app.use(morgan('combined'))
+app.use(express.json())
 &nbsp;
 // Routes
-<span class="cstat-no" title="statement not covered" >app.use('/api/auth', authRouter);</span>
-<span class="cstat-no" title="statement not covered" >app.use('/api/tasks', taskRouter);</span>
+app.use('/api/auth', authRouter);
+app.use('/api/tasks', taskRouter);
 &nbsp;
 // Health check
-<span class="cstat-no" title="statement not covered" >app.get('/health', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {</span>
+app.get('/health', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >  res.json({ status: 'OK', timestamp: new Date().toISOString() })</span>
 })
 &nbsp;
-export { <span class="cstat-no" title="statement not covered" >app </span>};
+export { app };
 &nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -148,7 +148,7 @@ export { <span class="cstat-no" title="statement not covered" >app </span>};
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-30T20:58:08.273Z
+                at 2025-09-30T22:32:19.377Z
             </div>
         <script src="../prettify.js"></script>
         <script>
