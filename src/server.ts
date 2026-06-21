@@ -1,20 +1,18 @@
-import { app } from './app';
-import { prisma } from './libs/prisma';
+import { app } from "./app";
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001;
 
 async function main() {
   try {
-    await prisma.$connect()
-    console.log('✅ Database connected');
+    console.log("✅ Database connected");
 
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
-    })
+    });
   } catch (error) {
-    console.error('❌ Server startup failed:', error);
+    console.error("❌ Server startup failed:", error);
     process.exit(1);
   }
 }
 
-main()
+main();
